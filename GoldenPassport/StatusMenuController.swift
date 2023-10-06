@@ -43,6 +43,12 @@ class StatusMenuController: NSObject {
         initStatusItem()
         initStatusMenuItems()
 
+        if (!keyboardMonitorEnabled) {
+            for item in statusMenu.items {
+                item.keyEquivalent = ""
+            }
+        }
+
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self,
                 selector: #selector(verifyCodeAdded),
@@ -124,8 +130,10 @@ class StatusMenuController: NSObject {
                 authCodeMenuItem.tag = authCodeMenuItemTagStartIndex + idx
                 authCodeMenuItem.toolTip = markDeleteVerifiedKey ? DELETE_VERIFY_KEY_STR : COPY_AUTH_CODE_STR
                 authCodeMenuItem.image = markDeleteVerifiedKey ? removeIcon : copyIcon
-                authCodeMenuItem.keyEquivalent = "\(idx)"
-                authCodeMenuItem.keyEquivalentModifierMask = [.command, .shift]
+                if (keyboardMonitorEnabled) {
+                    authCodeMenuItem.keyEquivalent = "\(idx)"
+                    authCodeMenuItem.keyEquivalentModifierMask = [.command, .shift]
+                }
                 authCodeMenuItems.append(authCodeMenuItem)
                 statusMenu.insertItem(authCodeMenuItem, at: idx)
                 idx = idx + 1

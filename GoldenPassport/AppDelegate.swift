@@ -10,16 +10,22 @@ import Cocoa
 import Carbon
 import Swifter
 
+let keyboardMonitorEnabled = false
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     let keyboardMonitor = KeyboardMonitor()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        keyboardMonitor.start()
+        if (keyboardMonitorEnabled) {
+            keyboardMonitor.start()
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        keyboardMonitor.stop()
+        if (keyboardMonitorEnabled) {
+            keyboardMonitor.stop()
+        }
     }
 }
 
