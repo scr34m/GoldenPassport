@@ -42,7 +42,7 @@ final class DataManager {
             let data = OTPAuthURL.base32Decode(otpData.secret)
             let gen = TOTPGenerator(secret: data,
                                     algorithm: TOTPGenerator.defaultAlgorithm(),
-                                    digits: TOTPGenerator.defaultDigits(),
+                                    digits: otpData.digits,
                                     period: TOTPGenerator.defaultPeriod())
             let code = gen?.generateOTP(for: Date())
 

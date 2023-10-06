@@ -13,6 +13,7 @@ class OTPAuthURLParser {
     var user: String?
     var host: String
     var secret: String
+    var digits: UInt
     
     init?(_ otpAuthURL: String) {
         // otpauth://totp/user@host?secret=DA82347xxx&issuer=xxx
@@ -31,11 +32,23 @@ class OTPAuthURLParser {
                 host = parts.first!
             }
             
-            secret = (
-                url.query!.components(separatedBy: "&").filter({ (component) -> Bool in
-                    return component.hasPrefix("secret=")
-                }).first?.components(separatedBy: "=")[1]
-            )!
+            let _secret = url.query!.components(separatedBy: "&").filter({ (component) -> Bool in
+                return component.hasPrefix("secret=")
+            }).first
+            if _secret != nil {
+                secret = _secret!.components(separatedBy: "=")[1]
+            } else {
+                secret = ""
+            }
+            
+            let _digits = url.query!.components(separatedBy: "&").filter({ (component) -> Bool in
+                return component.hasPrefix("digits=")
+            }).first
+            if _digits != nil {
+                digits = UInt(_digits!.components(separatedBy: "=")[1])!
+            } else {
+                digits = TOTPGenerator.defaultDigits()
+            }
         } else {
             return nil
         }
