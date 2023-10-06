@@ -1,5 +1,36 @@
-"add_key_menu_item.title" = "Quit";
-"remove_key_menu_item.title" = "Quit";
 
-"about_menu_item.title" = "Quit";
-"quit_menu_item.title" = "Quit";
+/* Class = "NSMenuItem"; title = "SWITCH"; ObjectID = "6Dm-32-chD"; */
+"6Dm-32-chD.title" = "SWITCH";
+
+/* Class = "NSMenuItem"; title = "添加..."; ObjectID = "EIF-pz-Vhv"; */
+"EIF-pz-Vhv.title" = "添加...";
+
+/* Class = "NSMenuItem"; title = "删除"; ObjectID = "EUi-mw-GQs"; */
+"EUi-mw-GQs.title" = "删除";
+
+/* Class = "NSMenuItem"; title = "退出"; ObjectID = "GAm-17-nOa"; */
+"GAm-17-nOa.title" = "退出";
+
+/* Class = "NSMenuItem"; title = "HTTP接口"; ObjectID = "H9A-2l-spp"; */
+"H9A-2l-spp.title" = "HTTP接口";
+
+/* Class = "NSMenuItem"; title = "启动时同时开启HTTP服务"; ObjectID = "HPl-pR-Wll"; */
+"HPl-pR-Wll.title" = "启动时同时开启HTTP服务";
+
+/* Class = "NSMenuItem"; title = "导入"; ObjectID = "Kmy-wJ-5fb"; */
+"Kmy-wJ-5fb.title" = "导入";
+
+/* Class = "NSMenuItem"; title = "导出"; ObjectID = "QDc-eW-cqJ"; */
+"QDc-eW-cqJ.title" = "导出";
+
+/* Class = "NSMenuItem"; title = "修改端口..."; ObjectID = "jhX-Gv-47b"; */
+"jhX-Gv-47b.title" = "修改端口...";
+
+/* Class = "NSMenuItem"; title = "帮助"; ObjectID = "lkD-dK-pdV"; */
+"lkD-dK-pdV.title" = "帮助";
+
+/* Class = "NSMenuItem"; title = "URL"; ObjectID = "rfh-jG-SkV"; */
+"rfh-jG-SkV.title" = "URL";
+
+/* Class = "NSMenuItem"; title = "认证管理"; ObjectID = "tVu-JO-mUd"; */
+"tVu-JO-mUd.title" = "认证管理";

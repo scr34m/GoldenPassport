@@ -1,0 +1,27 @@
+/* 
+  I18n.strings
+  GoldenPassport
+
+  Created by StanZhai on 2017/2/25.
+  Copyright © 2017年 StanZhai. All rights reserved.
+*/
+"ok" = "OK";
+"expiration" = "Expiration";
+"export" = "Export";
+"open_in_browser" = "Open in browser";
+"start_http_service_failed" = "Start HTTP service failed";
+"start_http_service" = "Start HTTP service";
+"stop_http_service" = "Stop HTTP service";
+"delete" = "Delete";
+"delete_finished" = "Delete finished";
+"click_to_copy_code" = "Click to copy the verification code";
+"click_to_delete_record" = "Click to delete the verification record";
+"delete_mode_1" = "Deletion mode enabled. Please go to the status bar menu to delete.";
+"delete_mode_2" = "After deletion, please select";
+"delete_mode_3" = " to disable mode.";
+"port_changed" = "Port has now been changed.";
+"port_error" = "Port number must be an integer greater than 0 and less than 65535. Please check and try again!";
+"verification_key_added" = "Added successfully, please check the status bar menu.";
+"verification_key_error" = "Unable to resolve key, please check the OTPAuth URL.";
+"import_done_1" = "";
+"import_done_2" = " record(s) were successfully imported!";

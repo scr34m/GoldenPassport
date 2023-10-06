@@ -1,0 +1,18 @@
+
+/* Class = "NSTextFieldCell"; placeholderString = "可选：为此验证码添加特定标识，便于识别"; ObjectID = "ETR-af-hzH"; */
+"ETR-af-hzH.placeholderString" = "You can add a specific identification";
+
+/* Class = "NSTextFieldCell"; title = "OTPAuth URL："; ObjectID = "GeJ-no-5a2"; */
+"GeJ-no-5a2.title" = "OTPAuth URL：";
+
+/* Class = "NSTextFieldCell"; placeholderString = "otpauth://totp/user@host?secret=...&issuer=..."; ObjectID = "KET-hm-MMu"; */
+"KET-hm-MMu.placeholderString" = "otpauth://totp/user@host?secret=...&issuer=...";
+
+/* Class = "NSButtonCell"; title = "添加"; ObjectID = "QAX-48-MKl"; */
+"QAX-48-MKl.title" = "Add";
+
+/* Class = "NSButtonCell"; title = "从二维码中识别..."; ObjectID = "R5h-qh-tEq"; */
+"R5h-qh-tEq.title" = "Import from QR";
+
+/* Class = "NSTextFieldCell"; title = "标识："; ObjectID = "sc4-HC-qit"; */
+"sc4-HC-qit.title" = "Name：";

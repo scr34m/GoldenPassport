@@ -1,0 +1,9 @@
+
+/* Class = "NSWindow"; title = "HTTP Server Port Config"; ObjectID = "F0z-JX-Cv5"; */
+"F0z-JX-Cv5.title" = "HTTP Server Port Config";
+
+/* Class = "NSButtonCell"; title = "确定"; ObjectID = "N1M-gs-vFJ"; */
+"N1M-gs-vFJ.title" = "确定";
+
+/* Class = "NSTextFieldCell"; title = "HTTP Server Port:"; ObjectID = "TWK-65-BHw"; */
+"TWK-65-BHw.title" = "HTTP Server Port:";

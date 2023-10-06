@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Quartz
 
 enum KeyCode: CGKeyCode {
     case a = 0

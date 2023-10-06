@@ -1,0 +1,27 @@
+/*
+  I18n.strings
+  GoldenPassport
+
+  Created by StanZhai on 2017/2/25.
+  Copyright © 2017年 StanZhai. All rights reserved.
+*/
+"ok" = "确定";
+"expiration" = "过期时间";
+"export" = "导出认证信息";
+"open_in_browser" = "浏览器访问";
+"start_http_service_failed" = "HTTP服务启动失败";
+"start_http_service" = "开启HTTP服务";
+"stop_http_service" = "停止HTTP服务";
+"delete" = "删除";
+"delete_finished" = "完成删除";
+"click_to_copy_code" = "点击复制验证码";
+"click_to_delete_record" = "点击删除认证记录";
+"delete_mode_1" = "已进入删除模式，请到状态栏菜单中删除认证信息。";
+"delete_mode_2" = "删除后，请执行";
+"delete_mode_3" = "退出删除模式";
+"port_changed" = "端口号已修改。";
+"port_error" = "端口号必须是大于0小于65535的整数，请检查后重试！";
+"verification_key_added" = "添加成功，请到状态栏菜单查看。";
+"verification_key_error" = "无法解析密钥，请检查OTPAuth URL。";
+"import_done_1" = "成功导入 ";
+"import_done_2" = " 条记录！";

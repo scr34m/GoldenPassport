@@ -69,7 +69,7 @@ class AddVerifyKeyWindow: NSWindowController, NSWindowDelegate {
         let tag = tagTextField.stringValue
         
         let alert: NSAlert = NSAlert()
-        alert.addButton(withTitle: "确定")
+        alert.addButton(withTitle: String(localized: "ok"))
         alert.alertStyle = NSAlert.Style.informational
         
         var isValid = false
@@ -84,9 +84,9 @@ class AddVerifyKeyWindow: NSWindowController, NSWindowDelegate {
             notificationCenter.post(name: NSNotification.Name(rawValue: "VerifyKeyAdded"), object: nil)
             self.window?.close()
             
-            alert.messageText = "添加成功，请到状态栏菜单查看。"
+            alert.messageText = String(localized: "verification_key_added")
         } else {
-            alert.messageText = "无法解析密钥，请检查OTPAuth URL。"
+            alert.messageText = String(localized: "verification_key_error")
             alert.alertStyle = NSAlert.Style.warning
         }
         

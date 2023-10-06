@@ -176,15 +176,15 @@ class StatusMenuController: NSObject {
     
     private func updateHttpSwitchMenuItem() {
         if (http == nil || http.state != HttpServerIO.HttpServerIOState.running) {
-            httpServerSwitch.title = "开启HTTP服务"
+            httpServerSwitch.title = String(localized: "start_http_service")
         } else {
-            httpServerSwitch.title = "停止HTTP服务"
+            httpServerSwitch.title = String(localized: "start_http_service")
         }
     }
 
     private func updateHttpURLMenuItem() {
         let serverPort = DataManager.shared.getHttpServerPort()
-        let url = "浏览器访问 http://localhost:\(serverPort)"
+        let url = String(localized: "open_in_browser") + " http://localhost:\(serverPort)"
         httpUrlMenuItem.title = url
         if (http == nil) {
             httpUrlMenuItem.isHidden = true
@@ -219,7 +219,7 @@ class StatusMenuController: NSObject {
             try http.start(UInt16(serverPort)!, forceIPv4: true)
         } catch {
             let alert = NSAlert()
-            alert.messageText = "HTTP服务启动失败:\n\(error)"
+            alert.messageText = String(localized: "start_http_service_failed") + ":\n\(error)"
             alert.runModal()
         }
     }
@@ -248,8 +248,8 @@ class StatusMenuController: NSObject {
 
         if markDeleteVerifiedKey {
             let alert: NSAlert = NSAlert()
-            alert.messageText = "已进入删除模式，请到状态栏菜单中删除认证信息。\n\n删除后，请执行`\(DONE_REMOVE_STR)`退出删除模式"
-            alert.addButton(withTitle: "确定")
+            alert.messageText = String(localized: "delete_mode_1") + "\n\n" + String(localized: "delete_mode_2") + " " + DONE_REMOVE_STR + " " + String(localized: "delete_mode_3")
+            alert.addButton(withTitle: String(localized: "ok"))
             alert.alertStyle = NSAlert.Style.informational
             alert.runModal()
         }
@@ -270,13 +270,13 @@ class StatusMenuController: NSObject {
         let count = DataManager.shared.importData(dist: openPanel.url!)
         needRefreshCodeMenus = true
         let alert = NSAlert()
-        alert.messageText = "成功导入\(count)条记录！"
+        alert.messageText = String(localized: "import_done_1") + "\(count)" + String(localized: "import_done_2")
         alert.runModal()
     }
     
     @IBAction func exportClicked(_ sender: NSMenuItem) {
         let savePanel = NSSavePanel()
-        savePanel.title = "导出认证信息"
+        savePanel.title = String(localized: "export")
         savePanel.nameFieldStringValue = "GoldenPassport.secrets"
         let i = savePanel.runModal()
         if i == NSApplication.ModalResponse.cancel {

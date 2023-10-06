@@ -8,12 +8,12 @@
 
 import Foundation
 
-let EXPIRE_TIME_STR = "过期时间: "
+let EXPIRE_TIME_STR = String(localized: "expiration") + ": "
 
-let COPY_AUTH_CODE_STR = "点击复制验证码"
-let DELETE_VERIFY_KEY_STR = "点击删除认证记录"
+let COPY_AUTH_CODE_STR = String(localized: "click_to_copy_code")
+let DELETE_VERIFY_KEY_STR = String(localized: "click_to_delete_record")
 
-let DONE_REMOVE_STR = "完成删除"
-let REMOVE_STR = "删除"
+let DONE_REMOVE_STR = String(localized: "delete_finished")
+let REMOVE_STR = String(localized: "delete")
 
 let DEFAULT_HTTP_PORT = 17304
